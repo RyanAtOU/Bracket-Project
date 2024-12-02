@@ -1,0 +1,124 @@
+﻿body {
+    background-color: #05053e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+}
+
+.bracket {
+    display: flex;
+    gap: 40px;
+    color: white;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+    .round h2 {
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .round h3,
+    .round h4 {
+        color: white;
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+
+.match {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+    position: relative;
+    width: 180px;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+.seed {
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-right: 10px;
+    min-width: 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.team-placeholder {
+    font-size: 0.9em;
+    color: gray;
+    font-style: italic;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.match::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+
+.round:not(:last-child) .match::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: white;
+}
+
+#round1 .match:nth-child(2n) {
+    margin-top: 40px;
+}
+
+#round2 .match {
+    margin-top: 70px;
+}
+
+#finals .match {
+    margin-top: 100px;
+}
+
